@@ -3,11 +3,13 @@ kind: Pod
 metadata:
   name: nginx
   labels:
-    team: devops
+    app: nginx
 spec:
   containers:
     - name: nginx
       image: nginx
+      ports: 
+        - containerPort: 8080
       resources:
         requests:
           cpu: "100m"
